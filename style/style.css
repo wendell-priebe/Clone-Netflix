@@ -2,20 +2,22 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-decoration: none;
 }
-
 :root{
     --red:#E50914 ;
     --black:#141414 ;
 }
-
 body{
     background: var(--black);
     font-family: 'Arial', Times, serif;
     color: #fff;
 }
+a{
+    text-decoration: none;
+    color: currentColor;
+}
 
+/* header */
 .container{
     margin-left: 20px;
     margin-right: 10px;
@@ -40,6 +42,7 @@ header nav a:hover{
 
 }
 
+/* filme principal */
 .title{
     margin-top: 15%;
     font-size: 40px;
@@ -68,6 +71,7 @@ header nav a:hover{
     color: white;
     padding: 15px 30px;
     margin-right: 15px;
+    margin-bottom: 10px;
     font-size: 12px;
     transition: .3s ease all;
     cursor: pointer;
@@ -79,12 +83,74 @@ header nav a:hover{
 .botao i{
     margin-right: 8px;
 }
+@media (max-width:425px){
+    .filme_principal .description{
+        margin-bottom: 40px;
+    }
+}
 
+/* carrosel */
 .box_filmes{
     height: 100%;
     width: 100%;
     display: block;
+    cursor: pointer;
+    transition: 300ms;
 }
 .carrosel_filmes{
     margin-top: 10px;
+}
+.transform{
+    transform: scale(1.5);
+    border: 2px solid red;
+}
+
+/* modal */
+.modal_overlay.active{
+    visibility:visible;
+    opacity: 1;
+}
+.modal_overlay{
+    visibility: hidden;
+    opacity: 0;
+    background: rgba(0,0,0,.7);
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 105%;
+    transition: 500ms;
+}
+.modal{
+    background:linear-gradient(to bottom,rgba(0,0,0,.9),rgba(0,0,0,0)), url("../img/HouseOfCards-Logo.png") no-repeat center;
+    background-size: cover;
+    box-shadow: 0 0 5px white;
+    color: white;
+    border-radius: 20px;
+    position: relative;
+    top: 20%;
+    padding: 20px;
+    margin: auto;
+    width: 50vw;
+    height: 50vh;
+}
+.button_close{
+    padding: 10px;
+}
+.fa-times-circle{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color:currentColor;
+    font-size: 30px;
+    cursor: pointer;
+}
+.modal h3{
+    font-size: 40px;
+    text-transform: uppercase;
+}
+.modal p{
+    margin-top: 40px;
+    font-size: 18px;
 }

@@ -1,0 +1,33 @@
+
+body{
+    background-color: #141414;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.fa-arrow-circle-left{
+    color: white;
+    background-color: #141414;
+    border-radius: 50%;
+    font-size: 45px;
+    position: fixed;
+    margin: 10px 10px;
+    cursor: pointer;
+}
+
+.video{
+    height: 100vh;
+    width: 100vw;
+}
+
+@media (max-width:768px){
+    .fa-arrow-circle-left{
+
+        font-size: 35px;
+    }
+}
+
+.none_display{
+    display: none;
+}
